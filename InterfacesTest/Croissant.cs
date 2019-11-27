@@ -8,6 +8,11 @@ namespace InterfacesTest
     {
         public string Filling { get; set; }
 
+        public Croissant ()
+        {
+            this.Name = KindOfBread.Croissant;
+            this.Id = (int) KindOfBread.Croissant;
+        }
         public override void Bake(int ammount)
         {
 

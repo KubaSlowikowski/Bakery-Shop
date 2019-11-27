@@ -8,6 +8,8 @@ namespace InterfacesTest
         {
             Bread roll = new Roll();
             roll.Buy(10, 10);
+
+
         }
     }
 }
