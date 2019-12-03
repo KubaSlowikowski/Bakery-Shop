@@ -6,8 +6,11 @@ namespace InterfacesTest
     {
         static void Main(string[] args)
         {
-            Bread roll = new Roll();
+            Croissant Croissant = new Croissant();
+            Roll roll = new Roll();
             roll.Buy(10, 10);
+            Croissant.Bake(3, 3, 3);
+          
         }
     }
 }

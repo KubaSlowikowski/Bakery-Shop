@@ -4,7 +4,9 @@ using System.Text;
 
 namespace InterfacesTest
 {
-    abstract class Bread
+    
+  
+    abstract class Bread 
     {
         public int Id { get; set; }
         public double Weight { get; set; }
@@ -12,7 +14,9 @@ namespace InterfacesTest
         public double Price { get; set; }
         public string Grain { get; set; }
         public bool IfBaked { get; set; }
-        public abstract void Bake(int ammount);
+        public double Flower { get; set; }
+        public double Sugar { get; set; }
+        
      
         public void Buy(int id, int ammount)
         {
