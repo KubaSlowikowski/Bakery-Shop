@@ -10,6 +10,9 @@ namespace InterfacesTest
 
         public override void Bake(int ammount)
         {
+            
+            BakedCount += ammount;
+          
 
         }
     }
