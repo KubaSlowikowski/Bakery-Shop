@@ -8,12 +8,16 @@ namespace InterfacesTest
     {
         public string Shape { get; set; }
         public bool IfCrossed { get; set; }
+
         public Roll()
         {
+            this.Name = KindOfBread.Roll;
+            this.Id = (int) KindOfBread.Roll;
         }
         public override void Bake(int ammount)
         {
 
         }
+
     }
 }

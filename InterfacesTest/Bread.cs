@@ -8,12 +8,19 @@ namespace InterfacesTest
     {
         public int Id { get; set; }
         public double Weight { get; set; }
-        public string Name { get; set; }
+        public KindOfBread Name { get; set; }
         public double Price { get; set; }
         public string Grain { get; set; }
         public bool IfBaked { get; set; }
         public abstract void Bake(int ammount);
-     
+
+        public enum KindOfBread
+        {
+            Roll=1,
+            Croissant
+        };
+
+        //Add an enum with kinds of bread: roll and croissant
         public void Buy(int id, int ammount)
         {
             Price = 2.5;
