@@ -7,9 +7,8 @@ namespace InterfacesTest
         static void Main(string[] args)
         {
             Bread roll = new Roll();
-            roll.Buy(10, 10);
-
-            Console.WriteLine(Bread.GetTotalIncome());
+            roll.Buy(20, 20);
+            Console.WriteLine("Calkowita Zysk {}", Bread.TotalIncome);
         }
     }
 }

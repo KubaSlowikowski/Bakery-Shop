@@ -13,7 +13,7 @@ namespace InterfacesTest
         public string Grain { get; set; }
         public bool IfBaked { get; set; }
         public abstract void Bake(int ammount);
-        protected static double TotalIncome { get; set; }
+        public static double TotalIncome { get; private set; }
      
         public void Buy(int id, int ammount)
         {
@@ -23,11 +23,6 @@ namespace InterfacesTest
             double bill = Price * ammount;   
             Console.WriteLine("Zakupiles {0} sztuk {1} za kwotę {2}", ammount, id, bill);
             TotalIncome += bill;
-        }
-
-        public static double GetTotalIncome()
-        {
-            return TotalIncome;
         }
     }
 }
