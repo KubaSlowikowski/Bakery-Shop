@@ -12,6 +12,7 @@ namespace InterfacesTest
             product = new Croissant();
 
             Delivery delivery = new Delivery(new SunnyBakery());
+            delivery.Deliver("15:22");
         }
     }
 }

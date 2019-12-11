@@ -13,9 +13,9 @@ namespace InterfacesTest
             bakery = b;
         }
 
-        public void StartBaking(int hour)
+        public void Deliver(string time)
         {
-
+            Console.WriteLine($"Delivered products for {bakery.GetType().Name} at {time}");
         }
     }
 }
