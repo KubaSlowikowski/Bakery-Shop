@@ -6,10 +6,12 @@ namespace InterfacesTest
     {
         static void Main(string[] args)
         {
-            Bread roll = new Roll();
-            roll.Buy(10, 10);
+            Bread product = new Roll();
+            product.Buy(10, 10);
 
+            product = new Croissant();
 
+            Delivery delivery = new Delivery(new SunnyBakery());
         }
     }
 }
