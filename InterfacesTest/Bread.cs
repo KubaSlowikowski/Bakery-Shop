@@ -15,9 +15,18 @@ namespace InterfacesTest
         public bool IfBaked { get; set; }
         public abstract void Bake(int ammount);
 
-        public static int BakedCount = 0;
+        public static int BakedCount { get; protected set; }
 
-        public static int SoldCount = 0;
+        public static int SoldCount { get;  private set; }
+
+
+        public enum PayMethod 
+        {
+            Card ,
+            Cash,
+            Phone
+        };
+
 
         public void Buy(int id, int ammount)
         {
