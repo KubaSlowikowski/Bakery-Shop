@@ -9,10 +9,11 @@ namespace InterfacesTest
             Bread product = new Roll();
             product.Buy(10, 10);
 
-            product = new Croissant();
+            product = new  Croissant();
 
             Delivery delivery = new Delivery(new SunnyBakery());
             delivery.Deliver("15:22");
+
         }
     }
 }

@@ -13,10 +13,12 @@ namespace InterfacesTest
         {
             this.Name = KindOfBread.Roll;
             this.Id = (int) KindOfBread.Roll;
+            this.Shape = null;
+            this.IfCrossed = false;
         }
         public override void Bake(int ammount)
         {
-
+            Console.WriteLine($"Bedziemy potrzebowac {ammount} {Shape}, {IfCrossed} bulek ");
         }
 
     }
