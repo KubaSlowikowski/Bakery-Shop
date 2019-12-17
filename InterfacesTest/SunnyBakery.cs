@@ -10,7 +10,7 @@ namespace InterfacesTest
 
         public void StartBaking(int hour)
         {
-
+            Console.WriteLine($"Starting Baking in {hour} ");
         }
     }
 }
