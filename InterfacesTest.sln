@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfacesTest", "InterfacesTest\InterfacesTest.csproj", "{1054FCD4-136B-4791-9D34-6687019684DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestBuy", "UnitTestBuy\UnitTestBuy.csproj", "{4320E54F-2132-4866-8910-CC198C6F4AE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreadTests", "UnitTestBuy\BreadTests.csproj", "{4320E54F-2132-4866-8910-CC198C6F4AE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
