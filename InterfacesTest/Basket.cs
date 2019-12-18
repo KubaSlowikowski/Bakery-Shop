@@ -39,6 +39,15 @@ namespace InterfacesTest
         }
         public void AddToBasket(params BasketPosition[] PositionsToAdd)
         {
+            if (BasketList.Count == 0)
+            {
+                Console.WriteLine("Dodaje produkt");
+                for(int i = 0; i < PositionsToAdd.Length; i++)
+                {
+                    BasketList.Add(PositionsToAdd[i]);
+                }
+                return;
+            }
             for (int i = 0; i<PositionsToAdd.Length; i++)
             {
                 for( int j = 0; j<Basket.BasketList.Count; j++)

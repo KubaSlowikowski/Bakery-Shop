@@ -6,8 +6,8 @@ namespace InterfacesTest
 {
     class BasketPosition
     {
-        public Bread product;
-        public int amount;
+        public Bread product { get; set; }
+        public int amount { get; set; }
 
         public BasketPosition(Bread prod, int amt)
         {
