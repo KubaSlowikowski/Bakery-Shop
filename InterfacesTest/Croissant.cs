@@ -12,10 +12,11 @@ namespace InterfacesTest
         {
             this.Name = KindOfBread.Croissant;
             this.Id = (int) KindOfBread.Croissant;
+            this.Filling = null;
         }
         public override void Bake(int ammount)
         {
-
+            Console.WriteLine($"Bedziemy potrzebowac {ammount} {Filling} Croissantow");
         }
     }
 }
