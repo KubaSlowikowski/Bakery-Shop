@@ -4,7 +4,7 @@ using System.Text;
 
 namespace InterfacesTest
 {
-    abstract class Bread
+    public abstract class Bread
     {
         public int Id { get; set; }
         public double Weight { get; set; }
@@ -21,13 +21,15 @@ namespace InterfacesTest
         };
 
         //Add an enum with kinds of bread: roll and croissant
-        public void Buy(int id, int ammount)
+        public double Buy(int id, int ammount)
         {
             Price = 2.5;
+
             //to do return price of concrete product here
 
             double bill = Price * ammount;   
             Console.WriteLine("Zakupiles {0} sztuk {1} za kwotę {2}", ammount, id, bill);
+            return bill;
         }
     }
 }
