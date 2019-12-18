@@ -13,6 +13,11 @@ namespace InterfacesTest
 
             Delivery delivery = new Delivery(new SunnyBakery());
             delivery.Deliver("15:22");
+
+            SunnyBakery sunny = new SunnyBakery();
+            sunny.StartBaking(13);
+
+
         }
     }
 }
