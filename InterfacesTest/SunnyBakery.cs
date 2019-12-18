@@ -4,7 +4,7 @@ using System.Text;
 
 namespace InterfacesTest
 {
-    class SunnyBakery : IBakery
+    class SunnyBakery : Bakeries, IBakery
     {
         public string Baker { get; set; }
 
