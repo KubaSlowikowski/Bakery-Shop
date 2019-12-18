@@ -4,37 +4,57 @@ using System.Text;
 
 namespace InterfacesTest
 {
-    class Basket
+
+    class Basket : IBasket
     {
-        public struct BasketPosition
-        {
-            public Bread product;
-            public int amount;
+       
+        
+        static List<BasketPosition> BasketList = new List<BasketPosition>();
 
-            public BasketPosition(Bread prod, int amt)
-            {
-                product = prod;
-                amount = amt;
-            }
-            public BasketPosition(Bread prod)
-            {
-                product = prod;
-                amount = 1;
-            }
-        }
-        List<BasketPosition> BasketList = new List<BasketPosition>();
 
-        public void AddToBasket(params BasketPosition[] PositionToAdd)
+        public void AddToBasket(Bread ProductToAdd)
         {
-            foreach (BasketPosition element in BasketList)
+            if( BasketList.Count == 0)
             {
-                if(element.product == PositionToAdd.product)
+                Console.WriteLine("Dodaje produkt");
+                BasketPosition PositionToAdd = new BasketPosition(ProductToAdd);
+                BasketList.Add(PositionToAdd);
+                return;
+            }
+            for (int i = 0; i < BasketList.Count; i++)
+            {
+                if (BasketList[i].product == ProductToAdd)
                 {
-
+                    BasketList[i].amount += 1;
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("Dodaje produkt");
+                    BasketPosition PositionToAdd = new BasketPosition(ProductToAdd);
+                    BasketList.Add(PositionToAdd);
+                    return;
                 }
             }
         }
-        // public void addToBasket(params Bread[] product); product + amount
+        public void AddToBasket(params BasketPosition[] PositionsToAdd)
+        {
+            for (int i = 0; i<PositionsToAdd.Length; i++)
+            {
+                for( int j = 0; j<Basket.BasketList.Count; j++)
+                {
+                    if ( PositionsToAdd[i].product == BasketList[i].product)
+                    {
+                        BasketList[j].amount += PositionsToAdd[i].amount;
+                    }
+                    else
+                    {
+                        BasketList.Add(PositionsToAdd[i]);
+                    }
+                }
+            }
+            
+        }
         public void RemoveFromBasket(BasketPosition positionToRemove)
         {
 
@@ -42,6 +62,15 @@ namespace InterfacesTest
         public void BuyFromBasket()
         {
 
+        }
+
+        public void ShowBasket()
+        {
+            Console.WriteLine("Jestem w ShowBasket");
+            foreach(BasketPosition element in BasketList)
+            {
+                Console.WriteLine($"Product: {element.product}, amount: {element.amount}");
+            }
         }
     }
 }

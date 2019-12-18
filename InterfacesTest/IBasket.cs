@@ -6,9 +6,10 @@ namespace InterfacesTest
 {
     interface IBasket
     {
-        public void AddToBasket(params Bread[] product);
-        // public void addToBasket(params Bread[] product); product + amount
-        public void RemoveFromBasket(Bread product);
+        public void AddToBasket(Bread ProductToAdd);
+        public void AddToBasket(params BasketPosition[] PositionsToAdd);
+        public void RemoveFromBasket(BasketPosition PositionToRemove);
         public void BuyFromBasket();
+        public void ShowBasket();
     }
 }
